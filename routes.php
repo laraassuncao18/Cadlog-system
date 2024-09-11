@@ -12,7 +12,7 @@ require 'controllers/DashboardController.php';
 $authcontroller = new AuthController();
 // Coleta a ação do URL, se não houver definida por padrão
 $action = $_GET['action'] ?? 'login';
-// Usa operador de coales
+// Usa operador de coalescencia nula(??)para definir 'login' se 'acition' não estiver presente.
 // Verifica a ação solicitada e chama o metodo apropiado do controlador
 switch($action){
     case 'login':

@@ -6,7 +6,7 @@ class AuthController
      //Cria função responsavel pelo processo de login
      public function login()
      {
-        
+
      }
 }
 ?>
