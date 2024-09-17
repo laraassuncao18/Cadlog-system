@@ -8,7 +8,7 @@
 <body>
     <div>
         <h2>Cadastro de Usuario</h2>
-        < action="" method="post">
+        <action="" method="post">
             <label for="nome"></label>
             <input type="text" name ="nome" id="nome"required>
             <label for="email">email</label> 
