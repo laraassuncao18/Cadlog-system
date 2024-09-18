@@ -11,7 +11,6 @@ public static function getConnection(){
         $db   ='sistema_usuarios';
         $user  ='root';
         $password  = '';
-//a conexao usa o driver msql(m)
         self::$instance = new PDO("mysql:host=$host;dbname=$db,$user,$password");
         //Define o modo de erro para excecoes,facilitando a depuracao e tratamento de erro.
         self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
