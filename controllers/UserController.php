@@ -9,7 +9,7 @@ class  UserController
     $data = [
         'nome' => $_POST['nome'],
         'email' => $_POST['email'],
-        'senha' => password_hash($_POST)['senha'],PASSWORD_DEFAULT),
+        'senha' => password_hash($_POST['senha'],PASSWORD_DEFAULT),
         'perfil' => $_POST['perfil']
     ];
     //chama o metodo create do model user para criar o novo usuario.

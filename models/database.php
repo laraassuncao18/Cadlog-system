@@ -2,7 +2,7 @@
 class Database{
     //utiliza padrao singleton, cujo objetivo é garantir que apenas uma unica instancia de classe seja criada durante a execução do programa, e que essa instancia seja utilizada.
 
-privatic static $instance = null;
+private static $instance = null;
 //metodo publico que retorna a conexao com BD.
 public static function getConnection(){
     // Verificar se a instancia de conexao ainda nao foi criada.
