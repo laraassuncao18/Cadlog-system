@@ -1,13 +1,5 @@
-# Cadlog-system
-
-
-
-
-
-
-
-
-
+# Cadlog-system-Tela de login
+Tarefa feita em sala
 
 ## controllers:
 
@@ -15,3 +7,8 @@
 
 ## views:
 
+## metodos utilizados:
+*vs code 
+*google
+*xammp
+*git hub

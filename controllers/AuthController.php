@@ -8,6 +8,10 @@ class AuthController
      //Verificar se a requisiçaõ HTTP é do tipo POST,ou seja,
      {
        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $email = $_POST['emai'];
+        $senha = $_POST['senha'];
+
+        $user = user::frindByEmail($email);
 
        }
      }

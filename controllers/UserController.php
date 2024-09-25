@@ -19,8 +19,7 @@ class  UserController
  }else{
     // Se a requisição não fot post (por exemplo,GET)
     include 'views/register.php';
- }
- }
+    }
+  }
 }
-
 ?>
