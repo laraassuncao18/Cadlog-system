@@ -21,8 +21,10 @@ Tarefa feita em sala,codigo que consiste em uma tela de acesso para um site inte
 
 * ``xampp``
 * ``git hub``
-* ``bootstrap``
-* ``vs code`` 
+* ``php``
+* ``vs code``
+* ``css``
+* ``html``
 
 ## 
 
