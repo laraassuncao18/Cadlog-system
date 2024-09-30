@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar-se</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div>
@@ -12,12 +13,12 @@
             <label for="nome"></label>
             <input type="text" name ="nome" id="nome"required>
             <label for="email">email</label> 
-            <input type="email"name= "senha" id="senha"required>
+            <input type="email"name= "email" id="email"required>
             <label for="senha">senha</label>
-            <input type="passwor"name="senha" id="senha"required>
+            <input type="password"name="senha" id="senha"required>
             <label for="=perfil">perfil:</label>
             <select name="perfil" id="perfil">
-                <option value="admin">admin</option>
+                <option value="admin">Admin</option>
                 <option value="gestor">Gestor</option>
                 <option value="colaborador">colaborador</option>
              </select>
