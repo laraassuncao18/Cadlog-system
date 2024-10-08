@@ -13,7 +13,22 @@ class AuthController
 
         $user = user::frindByEmail($email);
 
+        if($user &&  password_verify($senha, $user['senha'])){
+          // verifica se a senha corresponde com o hash.
+          session_start();
+          // armazena a sessão do ID do usuario e seu perfil.
+          $_SESSION['usuario_id'] = $user['id'];
+          $_SESSION['perfil']   = $user['perfil'];
+
+          header('location: index.php?action=dashboard');
+        }else{
+          echo "Email ou senha incorretos";
+        }
+      }else{
+        // se a requisição não for POST (por exenplo, get) correga a pagina de registro.
+        include 'views/login.php';
+      }
+
        }
-     }
-}
+      }
 ?>
