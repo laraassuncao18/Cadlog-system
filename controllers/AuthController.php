@@ -1,34 +1,37 @@
 <?php
-// requer arquivo 'user.php' que contem o model user com as funções para manipulação de dados de usuario.
+// Requer arquivo 'user.php' que contem o model user com as funções para manupulação de dados de usuário.
 require_once 'models/user.php';
-class AuthController
+ 
+class  AuthController
 {
-     //Cria função responsavel pelo processo de login
-     public function login()
-     //Verificar se a requisiçaõ HTTP é do tipo POST,ou seja,
-     {
-       if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $email = $_POST['emai'];
-        $senha = $_POST['senha'];
-
-        $user = user::frindByEmail($email);
-
-        if($user &&  password_verify($senha, $user['senha'])){
-          // verifica se a senha corresponde com o hash.
-          session_start();
-          // armazena a sessão do ID do usuario e seu perfil.
-          $_SESSION['usuario_id'] = $user['id'];
-          $_SESSION['perfil']   = $user['perfil'];
-
-          header('location: index.php?action=dashboard');
-        }else{
-          echo "Email ou senha incorretos";
+ 
+    // Cria função responsável pelo processo de login
+    public function login()
+    {
+        //Verifica se a requisição HTTP é do tipo post, ou seja se o formulario foi enviado
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+ 
+            $user = User::findByEmail($email);
+ 
+            if ($user && password_verify($senha, $user['senha'])) { //Verifica se a senha corresponde a um hash
+ 
+                session_start();
+ 
+                //Armazena na sessão o ID do usuario e seu perfil
+                $_SESSION['usuario_id'] = $user['id'];
+                $_SESSION['perfil'] = $user['perfil'];
+ 
+                header('Location: index.php?action=dashboard');
+            }else{
+                echo"Email ou senha incorretos";
+            }
+ 
+            }else{
+                // Se nao for POST carrega a pagina de registro
+                include 'views/register.php';
+            }
         }
-      }else{
-        // se a requisição não for POST (por exenplo, get) correga a pagina de registro.
-        include 'views/login.php';
-      }
-
-       }
-      }
+    }
 ?>
